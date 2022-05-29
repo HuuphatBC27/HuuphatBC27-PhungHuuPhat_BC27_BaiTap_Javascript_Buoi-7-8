@@ -126,7 +126,34 @@ function baitap8() {
   }
 }
 
-function baitap9() {}
+var b = [];
+function baitap9() {
+  var addNumbers = document.getElementById("numbers11").value;
+  b.push(addNumbers);
+
+  document.getElementById("addNumbers1").style.display = "Block";
+  document.getElementById("addNumbers1").innerHTML = b;
+}
+function checkSoNguyen(n) {
+  var flag = 1;
+  if (Math.ceil(n) != Math.floor(n)) flag = 0;
+  return flag;
+}
+function demSoNguyen() {
+  var i = 0;
+  check = 0;
+  count3 = 0;
+  for (vari = 0; i < b.length; i++) {
+    check = checkSoNguyen(b[i]);
+    if (check == 1) {
+      count3++;
+      console.log(count3);
+    }
+  }
+  document.getElementById("demso").style.display = "block";
+  document.getElementById("demso").innerHTML =
+    "số nguyên trong mảng là: " + count3;
+}
 
 function baitap10() {
   var count1 = 0;
