@@ -1,15 +1,12 @@
 var nums = [];
 function addNumber() {
-  var numberss = document.getElementById("number").value;
+  var numberss = +document.getElementById("number").value;
   //b2 : them value vua lay vao mang nums
   nums.push(numberss);
   document.getElementById("addNumbers").style.display = "block";
   document.getElementById(
     "addNumbers"
   ).innerHTML = `Số trong mảng là : ${nums}`;
-  if (numberss === "") {
-    alert("vui lòng nhập số liệu giùm đi :");
-  }
 }
 
 function baitap1() {
@@ -110,7 +107,24 @@ function baitap7() {
   document.getElementById("ketQua").innerHTML = `Mảng sau khi sắp xếp: ${nums}`;
 }
 
-function baitap8() {}
+function baitap8() {
+  var numberSNT = document.getElementById("snt");
+  numberSNT.style.display = "block";
+
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] < 2) {
+      numberSNT.innerHTML = `-1`;
+    } else if (nums[i] === 2 || nums[i] === 3 || nums[i] === 5) {
+      numberSNT.innerHTML = nums[i];
+      break;
+    } else if (nums[i] % 2 === 0 || nums[i] % 3 === 0 || nums[i] % 5 === 0) {
+      numberSNT.innerHTML = `-1`;
+    } else {
+      numberSNT.innerHTML = nums[i];
+      break;
+    }
+  }
+}
 
 function baitap10() {
   var count1 = 0;
