@@ -92,7 +92,7 @@ function baitap5() {
 }
 function baitap6() {
   var numbers1 = +document.getElementById("nums1").value;
-  var numbers2 = +document.getElementById("nums 2").value;
+  var numbers2 = +document.getElementById("nums2").value;
 
   (x = numbers1), (y = numbers2);
   nums[numbers1] = nums.splice(numbers2, 1, nums[numbers1])[0];
@@ -125,6 +125,8 @@ function baitap8() {
     }
   }
 }
+
+function baitap9() {}
 
 function baitap10() {
   var count1 = 0;
